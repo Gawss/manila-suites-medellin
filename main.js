@@ -12,8 +12,6 @@ console.log('Express server listening on port %d in %s mode', server.address().p
 console.log('Server On', __dirname)
 });
 
-
-
 app.get('/', (req, res) => {
 
     console.log('GET /');
