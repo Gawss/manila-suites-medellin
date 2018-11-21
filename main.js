@@ -1,5 +1,4 @@
 const express = require('express');
-
 const app = express();
 
 let SERVER_PORT = 1337;
