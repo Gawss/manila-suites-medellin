@@ -1,0 +1,330 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: OpenSans-Semibold;
+    src: url(./Source/font/OpenSans-Semibold.ttf);
+}
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(./Source/font/OpenSans-Regular.ttf);
+}
+.header{
+    width: 100%;
+    height: 22vh;
+    background-image: url("./Source/images/headerImg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+}
+.header__text{
+    margin-left: 25%;
+    margin-top: 2%;
+    width: 50%;
+    height: 50%;
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.185);
+    -webkit-text-fill-color: rgb(250, 232, 152);
+    font-family: OpenSans-Semibold, serif;
+}
+.masterDiv {
+    width: 100%;
+    height: 250vh;
+    background-color: black;
+}
+.state {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+.description {
+    width: 35%;
+    height: 90%;
+}
+.logo {
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+}
+.img_logo {
+    margin-left: 25px;
+    width: 70%;
+    height: 100%;
+}
+.price {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100%;
+    height: 5%;
+    font-size: 30px;
+    display: flex;
+    text-decoration-color: black;
+    font-family: OpenSans-Semibold, serif;
+}
+.ul__Info{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.list__item{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    font-family: OpenSans-Regular, serif;
+    font-size: 14px;
+}
+.gallery {
+    width: 65%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.container__img__principal{
+    width: 100%;
+    height: 70%;
+}
+.img__principal{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 90%;
+    height: 95%;
+}
+.container__imgs_miniatures{
+    width: 100%;
+    height: 30%;
+}
+.row_img__miniatures{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 2px;
+}
+.column {
+    width: 10%;
+    height: 100%;
+    padding: 2px;
+}
+.column img {
+    height: 100%;
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+.column img:hover {
+    opacity: 1;
+}
+
+.slider {
+    width: 90%;
+    height: 500px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px grey;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    animation: ani 2s linear;
+}
+
+@keyframes ani {
+    0% {
+        transform: scale(1.2);
+    }
+    10% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(201, 199, 199);
+    margin: 1em 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 0;
+}
+
+/* ------------------------------ */
+
+.state__2{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    background-color: rgb(233, 233, 230);
+}
+.container__video{
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+.video__tittle{
+    margin-top: 20px;
+    width: 100%;
+    height: 10%;
+    font-size: 30px;
+    -webkit-text-fill-color: rgb(10, 10, 10);
+    font-family: OpenSans-Semibold, serif;
+}
+
+.container__location{
+    width: 40%;
+    height: 100%;
+    text-align: center;
+}
+
+.location__tittle{
+    margin-top: 20px;
+    width: 100%;
+    height: 10%;
+    font-size: 30px;
+    -webkit-text-fill-color: rgb(10, 10, 10);
+    font-family: OpenSans-Semibold, serif;
+}
+
+.image__location{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+}
+
+/* ------------------------------ */
+
+.state__3{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    background-color: rgb(85, 85, 85);
+}
+.container__contact{
+    width: 40%;
+    height: 100%;
+}
+.contact__tittle{
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 10%;
+    font-size: 35px;
+    -webkit-text-fill-color: rgb(211, 211, 211);
+    font-family: OpenSans-Semibold, serif;
+}
+
+.ul__contact{
+    width: 100%;
+    height: 40%;
+    font-family: OpenSans-Regular, serif;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.list__item__contact{
+    margin-left: 8%;
+    margin-top: 2%;
+    -webkit-text-fill-color: rgb(163, 163, 163);
+}
+
+.container__bottom__right{
+    width: 60%;
+    height: 100%;
+    background-color: rgb(102, 102, 102);
+    align-content: center;
+}
+.logo__bottom{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 50%;
+    height: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1280px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
