@@ -129,9 +129,9 @@
     flex-direction: column;
 }
 .container__img__principal{
-    width: 100%;
-    max-height: 70%;
-    height: auto;
+    width: 870px;
+    /* max-height: 70%; */
+    height: 500px;
 }
 .container__img__principal.hover{
     cursor: pointer;
