@@ -238,7 +238,7 @@ hr {
     background-color: rgb(85, 85, 85);
 }
 .container__contact{
-    width: 40%;
+    width: 60%;
     height: 100%;
 }
 .contact__tittle{
@@ -267,7 +267,7 @@ hr {
 }
 
 .container__bottom__right{
-    width: 60%;
+    width: 40%;
     height: 100%;
     background-color: rgb(102, 102, 102);
     align-content: center;
@@ -275,9 +275,8 @@ hr {
 .logo__bottom{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
 }
 
 /* The Modal (background) */
