@@ -21,22 +21,27 @@
                 <div class="price">Information</div>
                 <ul class="ul__Info">
                     <hr/>
-                    <li class="list__item_tittle">City:</li>
+                    <li class="list__item_title">City/Ciudad:</li>
                     <li class="list__item">Medellín, Antioquia, Colombia.</li>
                     <hr/>
-                    <li class="list__item_tittle">Neighborhood:</li>
-                    <li class="list__item">Manila.</li>
-                    <button class="btn__LosPatios" onclick="window.open('https://www.facebook.com/lospatioshostalboutique/')">Los Patios</button>
+                    <li class="list__item_title">Neighborhood/Barrio:</li>
+                    <li class="list__item">Manila Barrio in Poblado.</li>
+                    <button class="btn__LosPatios" onclick="window.open('https://www.facebook.com/lospatioshostalboutique/')">Our next-door neighbor!</button>
                     <hr/>
-                    <li class="list__item_tittle">Address:</li>
+                    <li class="list__item_title">Address/Dirección:</li>
                     <li class="list__item">Carrera 43E #11-46</li>
                     <hr/>
-                    <li class="list__item_tittle">Close Places:</li>
-                    <li class="list__item">Centro comercial Monterrey.</li>
-                    <li class="list__item">Chef Burger Poblado.</li>
-                    <li class="list__item">Restaurante El Cielo.</li>
+                    <li class="list__item_title">Nearby Places/Lugares Cerca:</li>
+                    <li class="list__item">Exito del Poblado.</li>
+                    <li class="list__item">Poblado Metro Station.</li>
+                    <li class="list__item">Centro Comercial Monterrey.</li>
+                    <li class="list__item">Body Tech Gym--Manila.</li>
+                    <li class="list__item">Parque del Poblado.</li>
                     <hr/>
+                    <li class="list__item_title">Manila Floor Plan:</li>
                 </ul>
+                <img src="./Source/images/FloorPlan.png" class="img__floor__plan" id="image__plan"> -->
+                <hr/>
             </div>
             <div class="gallery">
                 <div class="container__img__principal" id="imageContainer">
@@ -209,16 +214,16 @@
         </div>
         <div class="state__2">
             <div class="container__location">
-                <div class="location__tittle">Location</div>
+                <div class="location__title">Location</div>
                 <div class="image__location">
-                    <img src="./Source/images/maps.JPG" style="width:100%">
+                    <img src="./Source/images/maps.JPG">
                 </div>
             </div>
             <div class="container__video">
-                <div class="video__tittle">Video</div>
+                <div class="video__title">Video</div>
                 <div>
                     <!-- <video width = "640" height = "360" controls> -->
-                    <video width = "83%" height = "70%" controls>
+                    <video width = "70%" height = "auto" controls>
                         <source src = "./Source/video/video.mp4" type = "video/mp4">
                         This browser doesn't support video tag.
                     </video>
@@ -227,7 +232,7 @@
         </div>
         <div class="state__3">
             <div class="container__contact">
-                <div class="contact__tittle">Contact</div>
+                <div class="contact__title">Contact</div>
                 <ul class="ul__contact">
                     <li class="list__item__contact">Juan Carlos Romero Racines</li>
                     <li class="list__item__contact">support@stellarviewrealty.com</li>
@@ -238,7 +243,7 @@
                 </div>
             </div>
             <div class="container__bottom__right">
-                <div class="contact__tittle">Architect</div>
+                <div class="contact__title">Architect</div>
                 <ul class="ul__contact">
                     <li class="list__item__contact">Concepto Arquitecta y construccion</li>
                     <li class="list__item__contact">Richard Cardona Fernández</li>
@@ -291,6 +296,14 @@
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
         imgs_.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+            viewEnabled = true;
+        }
+
+        var img_Plan = document.getElementById('image__plan');
+        img_Plan.onclick = function(){
             modal.style.display = "block";
             modalImg.src = this.src;
             captionText.innerHTML = this.alt;

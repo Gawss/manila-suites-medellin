@@ -24,7 +24,8 @@
     margin-left: 25%;
     margin-top: 2%;
     width: 50%;
-    height: 50%;
+    max-height: 50%;
+    height: auto;
     font-size: 50px;
     background-color: rgba(0, 0, 0, 0.185);
     -webkit-text-fill-color: rgb(250, 232, 152);
@@ -32,12 +33,14 @@
 }
 .masterDiv {
     width: 100%;
-    height: 250vh;
+    max-height: 280vh;
+    height: auto;
     background-color: black;
 }
 .state {
     width: 100%;
-    height: 50%;
+    max-height: 60%;
+    height: auto;
     display: flex;
     background-color: rgb(255, 255, 255);
 }
@@ -47,18 +50,20 @@
 }
 .logo {
     width: 100%;
-    height: 20%;
+    max-height: 20%;
+    height: auto;
     justify-content: center;
 }
 .img_logo {
     margin-left: 25px;
     width: 70%;
-    height: 100%;
+    /* height: 100%; */
+    height: auto;
 }
 .price {
     margin-top: 20px;
-    margin-left: 20px;
-    width: 100%;
+    margin-left: 10%;
+    width: 90%;
     height: 5%;
     font-size: 30px;
     display: flex;
@@ -67,6 +72,7 @@
 }
 .ul__Info{
     width: 100%;
+    height: 40%;
     margin-bottom: 10px;
 }
 .list__item{
@@ -77,7 +83,7 @@
     font-size: 14px;
 }
 
-.list__item_tittle{
+.list__item_title{
     margin-left: 20px;
     margin-bottom: 5px;
     list-style-type: none;
@@ -87,7 +93,6 @@
 
 .btn__LosPatios{
     background-color: rgb(250, 232, 152);
-    border: none;
     color: rgb(27, 27, 27);
     font-family: OpenSans-Semibold, serif;
     border-radius: 8px;
@@ -97,13 +102,25 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    width: 30%;
+    max-width: 60%;
+    width: auto;
     height: 40%;
-    margin-left: 35%;
+    margin-left: 28%;
     cursor: pointer;
 }
 .btn__LosPatios:hover{
     background-color: rgb(255, 255, 255);
+}
+
+.img__floor__plan{
+    margin-left: 10%;
+    margin-bottom: 20px;
+    width: 60%;
+    max-height: 20%;
+    height: auto;
+}
+.img__floor__plan:hover{
+    cursor: pointer;
 }
 .gallery {
     width: 65%;
@@ -113,7 +130,11 @@
 }
 .container__img__principal{
     width: 100%;
-    height: 70%;
+    max-height: 70%;
+    height: auto;
+}
+.container__img__principal.hover{
+    cursor: pointer;
 }
 .img__principal{
     margin-left: 20px;
@@ -123,7 +144,8 @@
 }
 .container__imgs_miniatures{
     width: 100%;
-    height: 30%;
+    max-height: 30%;
+    height: auto;
 }
 .row_img__miniatures{
     width: 80%;
@@ -189,7 +211,8 @@ hr {
 
 .state__2{
     width: 100%;
-    height: 30%;
+    max-height: 25%;
+    height: auto;
     display: flex;
     background-color: rgb(233, 233, 230);
 }
@@ -198,8 +221,9 @@ hr {
     height: 100%;
     text-align: center;
 }
-.video__tittle{
-    margin-top: 20px;
+.video__title{
+    margin-top: 4%;
+    margin-bottom: 2%;
     width: 100%;
     height: 10%;
     font-size: 30px;
@@ -213,8 +237,9 @@ hr {
     text-align: center;
 }
 
-.location__tittle{
-    margin-top: 20px;
+.location__title{
+    margin-top: 4%;
+    margin-bottom: 2%;
     width: 100%;
     height: 10%;
     font-size: 30px;
@@ -225,27 +250,31 @@ hr {
 .image__location{
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    height: 70%;
+    margin-bottom: 4%;
+    max-width: 70%;
+    width: auto;
+    height: auto;
 }
 
 /* ------------------------------ */
 
 .state__3{
     width: 100%;
-    height: 20%;
+    max-height: 15%;
+    height: auto;
     display: flex;
     background-color: rgb(85, 85, 85);
 }
 .container__contact{
     width: 60%;
-    height: 100%;
+    max-height: 100%;
+    height: auto;
 }
-.contact__tittle{
+.contact__title{
     margin-top: 20px;
     margin-left: 5%;
     margin-bottom: 20px;
-    width: 100%;
+    width: 95%;
     height: 10%;
     font-size: 35px;
     -webkit-text-fill-color: rgb(211, 211, 211);
@@ -284,7 +313,8 @@ hr {
 
 .container__bottom__right{
     width: 40%;
-    height: 100%;
+    max-height: 100%;
+    height: auto;
     background-color: rgb(102, 102, 102);
     align-content: center;
 }
