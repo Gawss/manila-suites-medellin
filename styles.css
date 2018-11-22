@@ -76,6 +76,14 @@
     font-family: OpenSans-Regular, serif;
     font-size: 14px;
 }
+
+.list__item_tittle{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    list-style-type: none;
+    font-family: OpenSans-Semibold, serif;
+    font-size: 18px;
+}
 .gallery {
     width: 65%;
     height: 90%;
