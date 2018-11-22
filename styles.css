@@ -84,6 +84,27 @@
     font-family: OpenSans-Semibold, serif;
     font-size: 18px;
 }
+
+.btn__LosPatios{
+    background-color: rgb(250, 232, 152);
+    border: none;
+    color: rgb(27, 27, 27);
+    font-family: OpenSans-Semibold, serif;
+    border-radius: 8px;
+    border: 2px solid rgb(250, 232, 152);
+    padding: 15px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 30%;
+    height: 40%;
+    margin-left: 35%;
+    cursor: pointer;
+}
+.btn__LosPatios:hover{
+    background-color: rgb(255, 255, 255);
+}
 .gallery {
     width: 65%;
     height: 90%;
@@ -119,7 +140,7 @@
 .column img {
     height: 100%;
     opacity: 0.8; 
-    cursor: pointer; 
+    cursor: pointer;
 }
 .column img:hover {
     opacity: 1;
