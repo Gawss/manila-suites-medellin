@@ -194,7 +194,7 @@ hr {
     background-color: rgb(233, 233, 230);
 }
 .container__video{
-    width: 60%;
+    width: 55%;
     height: 100%;
     text-align: center;
 }
@@ -208,7 +208,7 @@ hr {
 }
 
 .container__location{
-    width: 40%;
+    width: 45%;
     height: 100%;
     text-align: center;
 }
@@ -264,6 +264,17 @@ hr {
     margin-left: 8%;
     margin-top: 2%;
     -webkit-text-fill-color: rgb(163, 163, 163);
+}
+
+.list__item__url{
+    margin-left: 8%;
+    margin-top: 2%;
+    -webkit-text-fill-color: rgb(163, 163, 163);
+    text-decoration: underline;
+}
+
+.list__item__url:hover{
+    cursor: pointer;
 }
 
 .container__bottom__right{
