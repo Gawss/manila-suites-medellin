@@ -268,7 +268,7 @@ hr {
 .container__contact{
     width: 60%;
     max-height: 100%;
-    height: auto;
+    height: auto;    
 }
 .contact__title{
     margin-top: 20px;
@@ -283,7 +283,7 @@ hr {
 
 .ul__contact{
     width: 100%;
-    height: 40%;
+    height: 20%;
     font-family: OpenSans-Regular, serif;
     list-style-type: none;
     font-size: 14px;
@@ -293,6 +293,30 @@ hr {
     margin-left: 8%;
     margin-top: 2%;
     -webkit-text-fill-color: rgb(163, 163, 163);
+}
+
+.logo__bottom{
+    width: 100%;
+    height: 40%;
+    margin-top: 5%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.img_stellar_logo{
+    margin-top: 1%;
+    /* margin-left: 33%; */
+    margin-left: 10%;
+    width: 30%;
+    height: 80%;
+}
+
+.img_logo_bot{
+    margin-top: 1%;
+    margin-left: 14%;
+    width: 40%;
+    height: 80%;
 }
 
 .space{
@@ -316,15 +340,21 @@ hr {
     max-height: 100%;
     height: auto;
     background-color: rgb(102, 102, 102);
-    align-content: center;
-}
-.logo__bottom{
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    height: 30%;
 }
 
+.container__Logo_Right{
+    margin-top: 7.5%;
+    width: 100%;
+    height: 40%;
+    background-color: rgb(0, 0, 0);
+}
+
+.img_logo_bot_right{
+    margin-top: 3%;
+    margin-left: 25%;
+    width: 40%;
+    height: 80%;
+}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
