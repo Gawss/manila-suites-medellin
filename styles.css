@@ -83,6 +83,14 @@
     font-size: 14px;
 }
 
+.list__item_Price{
+    margin-left: 30px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    font-family: OpenSans-Regular, serif;
+    font-size: 18px;
+}
+
 .list__item_title{
     margin-left: 20px;
     margin-bottom: 5px;
@@ -91,23 +99,54 @@
     font-size: 18px;
 }
 
+.list__item_Price_title{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    list-style-type: none;
+    font-family: OpenSans-Semibold, serif;
+    font-size: 25px;
+}
+
+.btn__video{
+    background-color: rgb(250, 232, 152);
+    color: rgb(27, 27, 27);
+    font-family: OpenSans-Semibold, serif;
+    border-radius: 8px;
+    border: 2px solid rgb(250, 232, 152);
+    padding: 3% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 40%;
+    height: 20%;
+    margin-left: 5%;
+    margin-bottom: 4%;
+    cursor: pointer;
+}
+.btn__video:hover{
+    background-color: rgb(255, 255, 255);
+}
+
 .btn__LosPatios{
     background-color: rgb(250, 232, 152);
     color: rgb(27, 27, 27);
     font-family: OpenSans-Semibold, serif;
     border-radius: 8px;
     border: 2px solid rgb(250, 232, 152);
-    padding: 15px 16px;
+    padding: 3% 2%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    max-width: 80%;
+    max-width: 60%;
     width: auto;
-    height: 40%;
-    margin-left: 24%;
+    height: 20%;
+    margin-left: 20%;
+    margin-bottom: 2%;
     cursor: pointer;
 }
+
 .btn__LosPatios:hover{
     background-color: rgb(255, 255, 255);
 }
