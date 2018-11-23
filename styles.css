@@ -82,6 +82,13 @@
     font-family: OpenSans-Regular, serif;
     font-size: 14px;
 }
+.list__item_neighbor{
+    margin-bottom: 10px;
+    list-style-type: none;
+    font-family: OpenSans-Semibold, serif;
+    font-size: 16px;
+    text-align: center;
+}
 .list__item_description{
     margin-left: 20px;
     margin-right: 20px;
