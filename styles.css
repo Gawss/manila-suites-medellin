@@ -82,6 +82,14 @@
     font-family: OpenSans-Regular, serif;
     font-size: 14px;
 }
+.list__item_enlarge{
+    text-align: center;
+    list-style-type: none;
+    font-family: OpenSans-Regular, serif;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.185);
+    -webkit-text-fill-color: rgb(63, 62, 60);
+}
 .list__item_neighbor{
     margin-bottom: 10px;
     list-style-type: none;
@@ -89,14 +97,27 @@
     font-size: 16px;
     text-align: center;
 }
-.list__item_description{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    list-style-type: none;
-    font-family: OpenSans-Regular, serif;
-    font-size: 14px;
-    text-align: justify;
+@media (min-width: 1401px) {
+    .list__item_description{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        list-style-type: none;
+        font-family: OpenSans-Regular, serif;
+        font-size: 18px;
+        text-align: justify;
+    }
+}
+@media (min-width: 700px) and  (max-width: 1400px) {
+    .list__item_description{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        list-style-type: none;
+        font-family: OpenSans-Regular, serif;
+        font-size: 14px;
+        text-align: justify;
+    }
 }
 
 .list__item_Price{
@@ -168,7 +189,7 @@
 }
 
 .img__floor__plan{
-    margin-left: 10%;
+    margin-left: 20%;
     margin-bottom: 20px;
     width: 60%;
     max-height: 20%;
