@@ -1,5 +1,4 @@
-// const REALTOR_EMAIL = 'support@stellarviewrealty.com';
-const REALTOR_EMAIL = 'luispalacio1997@hotmail.com';
+const REALTOR_EMAIL = 'support@stellarviewrealty.com';
 
 module.exports = {
     REALTOR_EMAIL
