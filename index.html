@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="header">
@@ -182,13 +183,13 @@
                     </li>
                     <hr/>
                     <li class="list__item_title">Specifications/Especificaciones:</li>
-                    <li class="list__item_description">Each floor has (including balconies)/Cada piso tiene (incluyendo balcones) 160 mts^2</li>
-                    <li class="list__item_description">Total area built (including rooftop terrace)/Área total construida (incluyendo terraza): 960 mts^2</li>
-                    <li class="list__item_description">Common areas/Zonas comunes: 250 mts^2</li>
+                    <li class="list__item_description">Each floor has (including balconies)/Cada piso tiene (incluyendo balcones) 160 m^2/sq mt</li>
+                    <li class="list__item_description">Total area built (including rooftop terrace)/Área total construida (incluyendo terraza): 960 m^2/sq mt</li>
+                    <li class="list__item_description">Common areas/Zonas comunes: 250 m^2/sq mt</li>
                     <li class="list__item_description">Three studio apts per floor/Tres estudios por piso</li>
-                    <li class="list__item_spec_apt">Aparment/Apartamento #1: 32 mts^2</li>
-                    <li class="list__item_spec_apt">Aparment/Apartamento #2: 32 mts^2</li>
-                    <li class="list__item_spec_apt">Aparment/Apartamento #3: 53 mts^2</li>
+                    <li class="list__item_spec_apt">Aparment/Apartamento #1: 32 m^2/sq mt</li>
+                    <li class="list__item_spec_apt">Aparment/Apartamento #2: 32 m^2/sq mt</li>
+                    <li class="list__item_spec_apt">Aparment/Apartamento #3: 53 m^2/sq mt</li>
                     <hr/>
                 </ul>
             </div>
@@ -218,7 +219,7 @@
                 <ul class="ul__contact">
                     <li class="list__item__contact">Juan Carlos Romero Racines</li>
                     <li class="list__item__contact">Cel: (+57) 313 766-9798</li>
-                    <li class="list__item__contact">support@stellarviewrealty.com</li>                    
+                    <li class="list__item__contact">support@stellarviewrealty.com</li>                  
                     <div class="space"></div>
                     <a class="list__item__url" href="http://www.stellarviewrealty.com" target="_blank">www.stellarviewrealty.com</a>
                 </ul>
@@ -232,7 +233,7 @@
                 <ul class="ul__contact">
                     <li class="list__item__contact">Richar Cardona Fernández</li>
                     <li class="list__item__contact">Cel: (+57) 302 243-4087</li>
-                    <div class="space"></div>
+                    
                     <li class="list__item__contact">Concepto Arquitectura y Construccion</li>
                     <div class="space"></div>
                     <a class="list__item__url" href="http://www.conceptoayc.com" target="_blank">www.conceptoayc.com</a>
@@ -240,6 +241,19 @@
                 <div class="container__Logo_Right">
                     <img src="./Source/images/caycLogo.jpg" class="img_logo_bot_right">
                 </div>
+            </div>
+            <div class="container__investor__info">
+                <li class="contact__title">Contact Now!</li>
+                <form class="form_investor" action="">
+                    <li class="list__item__contact_msg">Send us your info and we will contact you!</li>
+                    <li class="list__item__contact">Name/Nombre:</li>
+                    <input type="_input_" id="investor_name_input" value="" placeholder="Your name..."></input>
+                    <li class="list__item__contact">E-mail/Correo:</li>
+                    <input type="_input_" id="investor_email_input" value="" placeholder="Your E-mail..."></input>
+                    <li class="list__item__contact">Phone/Celular:</li>
+                    <input type="_input_" id="investor_phone_input" value="" placeholder="Your phone number..."></input>
+                    <input type="submit" value="Send/Enviar" class="btn__video"></input>
+                </form>
             </div>
         </div>
     </div>
@@ -304,6 +318,21 @@
         span.onclick = function() { 
             modal.style.display = "none";
             viewEnabled = false;
+        }
+
+        function sendMail(){
+            var investor_name_input = document.getElementById('investor_name_input').value;
+            var password = document.getElementById('password').value;
+
+            $.post(
+                'https://manila-suites-medellin.herokuapp.com/notification',
+                {
+                    USERNAME: username, 
+                    PASSWORD: password
+                },
+                function(data, status){
+                alert("E-mail sent/Correo enviado.");
+            });
         }
     </script>
 </body>
