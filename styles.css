@@ -450,6 +450,7 @@ input[type=submit]:hover {
     font-family: OpenSans-Semibold, serif;
     list-style-type: none;
     font-size: 15px;
+    text-align: center;
 }
 .form_investor{
     width: 100%;
@@ -471,7 +472,7 @@ input[type=submit]:hover {
 }
 
 .list__item__contact{
-    margin-left: 8%;
+    text-align: center;;
     margin-top: 2%;
     -webkit-text-fill-color: rgb(163, 163, 163);
 }
@@ -511,10 +512,11 @@ input[type=submit]:hover {
 }
 
 .list__item__url{
-    margin-left: 8%;
+    
     margin-top: 2%;
     -webkit-text-fill-color: rgb(163, 163, 163);
     text-decoration: underline;
+    text-align: center;
 }
 
 .list__item__url:hover{
