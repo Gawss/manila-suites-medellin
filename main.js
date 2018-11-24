@@ -16,3 +16,9 @@ app.get('/', (req, res) => {
     console.log('GET /');
     res.sendFile(__dirname + '/index.html');
 });
+
+app.post('/notification', (req, res) => {
+
+    console.log(req.body);
+    res.send('Ok');
+});

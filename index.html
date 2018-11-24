@@ -244,7 +244,7 @@
             </div>
             <div class="container__investor__info">
                 <li class="contact__title">Contact Now!</li>
-                <form class="form_investor" action="">
+                <ul class="form_investor">
                     <li class="list__item__contact_msg">Send us your info and we will contact you!</li>
                     <li class="list__item__contact">Name/Nombre:</li>
                     <input type="_input_" id="investor_name_input" value="" placeholder="Your name..."></input>
@@ -252,8 +252,8 @@
                     <input type="_input_" id="investor_email_input" value="" placeholder="Your E-mail..."></input>
                     <li class="list__item__contact">Phone/Celular:</li>
                     <input type="_input_" id="investor_phone_input" value="" placeholder="Your phone number..."></input>
-                    <input type="submit" value="Send/Enviar" class="btn__video"></input>
-                </form>
+                    <input type="submit" value="Send/Enviar" onclick="sendMail();"></input>
+                </ul>
             </div>
         </div>
     </div>
@@ -322,17 +322,23 @@
 
         function sendMail(){
             var investor_name_input = document.getElementById('investor_name_input').value;
-            var password = document.getElementById('password').value;
+            var investor_email_input = document.getElementById('investor_email_input').value;
+            var investor_phone_input = document.getElementById('investor_phone_input').value;
 
-            $.post(
-                'https://manila-suites-medellin.herokuapp.com/notification',
-                {
-                    USERNAME: username, 
-                    PASSWORD: password
-                },
-                function(data, status){
-                alert("E-mail sent/Correo enviado.");
-            });
+            if(investor_name_input !== '' && (investor_email_input !== '' | investor_phone_input !== '')){
+                    $.post(
+                    'https://manila-suites-medellin.herokuapp.com/notification',
+                    {
+                        NAME: investor_name_input, 
+                        EMAIL: investor_email_input,
+                        PHONE: investor_phone_input
+                    },
+                    function(data, status){
+                    alert("E-mail sent.\nCorreo enviado.");
+                });
+            }else{
+                alert("Insert at least one way to communicate with you (email or phone). Thanks!.\nIngresa al menos una forma para comunicarnos contigo (correo o celular). ¡Gracias!")
+            }
         }
     </script>
 </body>
