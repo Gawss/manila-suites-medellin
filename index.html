@@ -18,8 +18,8 @@
                 if(investor_name_input !== '' && (investor_email_input !== '' | investor_phone_input !== '')){
                     console.log(investor_name_input);
                         $.post(
-                        'https://manila-suites-medellin.herokuapp.com/notification',
-                        // 'http://localhost:1337/notification',
+                        // 'https://manila-suites-medellin.herokuapp.com/notification',
+                        'http://localhost:1337/notification',
                         {
                             NAME: investor_name_input, 
                             EMAIL: investor_email_input,
