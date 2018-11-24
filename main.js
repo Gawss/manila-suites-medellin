@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const sendEmail = require('./GmailAPI/sendEmail');
+const REALTOR_EMAIL = require('./Config/config').REALTOR_EMAIL;
 const app = express();
 
 let SERVER_PORT = 1337;
@@ -33,7 +34,7 @@ app.post('/notification', (req, res) => {
                     '\n\nName: ' + name                    +
                     '\nE-mail: ' + email                    +
                     '\nPhone: ' + phone                     +
-                    '\n\n Good Luck!';
-    sendEmail(email, message);
+                    '\n\nGood Luck!';
+    sendEmail(REALTOR_EMAIL, message);
     res.send('Ok');
 });
