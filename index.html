@@ -8,6 +8,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#sendButton").click(function sendMail(){
+                var investor_name_input = document.getElementById('investor_name_input').value;
+                var investor_email_input = document.getElementById('investor_email_input').value;
+                var investor_phone_input = document.getElementById('investor_phone_input').value;
+
+                if(investor_name_input !== '' && (investor_email_input !== '' | investor_phone_input !== '')){
+                    console.log(investor_name_input);
+                        $.post(
+                        // 'https://manila-suites-medellin.herokuapp.com/notification',
+                        'http://localhost:1337/notification',
+                        {
+                            NAME: investor_name_input, 
+                            EMAIL: investor_email_input,
+                            PHONE: investor_phone_input
+                        },
+                        function(data, status){
+                        alert("E-mail sent.\nCorreo enviado.");
+                    });
+                }else{
+                    alert("Insert at least one way to communicate with you (email or phone). Thanks!.\nIngresa al menos una forma para comunicarnos contigo (correo o celular). ¡Gracias!")
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="header">
@@ -252,7 +278,7 @@
                     <input type="_input_" id="investor_email_input" value="" placeholder="Your E-mail..."></input>
                     <li class="list__item__contact">Phone/Celular:</li>
                     <input type="_input_" id="investor_phone_input" value="" placeholder="Your phone number..."></input>
-                    <input type="submit" value="Send/Enviar" onclick="sendMail();"></input>
+                    <input type="submit" id="sendButton" value="Send/Enviar" ></input>
                 </ul>
             </div>
         </div>
@@ -318,27 +344,6 @@
         span.onclick = function() { 
             modal.style.display = "none";
             viewEnabled = false;
-        }
-
-        function sendMail(){
-            var investor_name_input = document.getElementById('investor_name_input').value;
-            var investor_email_input = document.getElementById('investor_email_input').value;
-            var investor_phone_input = document.getElementById('investor_phone_input').value;
-
-            if(investor_name_input !== '' && (investor_email_input !== '' | investor_phone_input !== '')){
-                    $.post(
-                    'https://manila-suites-medellin.herokuapp.com/notification',
-                    {
-                        NAME: investor_name_input, 
-                        EMAIL: investor_email_input,
-                        PHONE: investor_phone_input
-                    },
-                    function(data, status){
-                    alert("E-mail sent.\nCorreo enviado.");
-                });
-            }else{
-                alert("Insert at least one way to communicate with you (email or phone). Thanks!.\nIngresa al menos una forma para comunicarnos contigo (correo o celular). ¡Gracias!")
-            }
         }
     </script>
 </body>
