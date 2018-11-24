@@ -83,6 +83,7 @@
     font-size: 14px;
 }
 .list__item_enlarge{
+    margin-top: 1.8%;
     text-align: center;
     list-style-type: none;
     font-family: OpenSans-Regular, serif;
@@ -107,6 +108,15 @@
         font-size: 18px;
         text-align: justify;
     }
+    .list__item_spec_apt{
+        margin-left: 40px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        list-style-type: none;
+        font-family: OpenSans-Regular, serif;
+        font-size: 18px;
+        text-align: justify;
+    }
 }
 @media (min-width: 700px) and  (max-width: 1400px) {
     .list__item_description{
@@ -114,6 +124,15 @@
         margin-right: 20px;
         margin-bottom: 10px;
         list-style-type: none;
+        font-family: OpenSans-Regular, serif;
+        font-size: 14px;
+        text-align: justify;
+    }
+    .list__item_spec_apt{
+        margin-left: 60px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        list-style-type: square;
         font-family: OpenSans-Regular, serif;
         font-size: 14px;
         text-align: justify;
@@ -188,9 +207,10 @@
 }
 
 .img__floor__plan{
-    margin-left: 20%;
-    margin-bottom: 20px;
-    width: 60%;
+    margin-left: 2.5%;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 95%;
     max-height: 20%;
     height: auto;
 }
