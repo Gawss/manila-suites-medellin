@@ -28,13 +28,28 @@ app.post('/notification', (req, res) => {
     let name = req.body.NAME;
     let email = req.body.EMAIL;
     let phone = req.body.PHONE;
-
-    let message =   'Looks like an investor is interested!' + 
+    let message = '';
+    if(email === ''){
+        message =   'Looks like an investor is interested!' + 
+                    '\nHere is the contact information: '   +
+                    '\n\nName: ' + name                    +
+                    '\nPhone: ' + phone                     +
+                    '\n\nGood Luck!';
+    }else if(phone === ''){
+        message =   'Looks like an investor is interested!' + 
                     '\nHere is the contact information: '   +
                     '\n\nName: ' + name                    +
                     '\nE-mail: ' + email                    +
-                    '\nPhone: ' + phone                     +
                     '\n\nGood Luck!';
+    }else{
+        message =   'Looks like an investor is interested!' + 
+        '\nHere is the contact information: '   +
+        '\n\nName: ' + name                    +
+        '\nE-mail: ' + email                    +
+        '\nPhone: ' + phone                     +
+        '\n\nGood Luck!';
+    };
+
     sendEmail(REALTOR_EMAIL, message);
     res.send('Ok');
 });
