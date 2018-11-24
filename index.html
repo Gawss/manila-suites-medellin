@@ -18,8 +18,7 @@
                 if(investor_name_input !== '' && (investor_email_input !== '' | investor_phone_input !== '')){
                     console.log(investor_name_input);
                         $.post(
-                        // 'https://manila-suites-medellin.herokuapp.com/notification',
-                        'http://localhost:1337/notification',
+                        'https://manila-suites-medellin.herokuapp.com/notification',
                         {
                             NAME: investor_name_input, 
                             EMAIL: investor_email_input,
@@ -231,7 +230,6 @@
             <div class="container__video">
                 <div class="video__title">Manila Suites Video</div>
                 <div>
-                    <!-- <video width = "640" height = "360" controls> -->
                     <video width = "70%" height = "auto" controls>
                         <source src = "./Source/video/video.mp4" type = "video/mp4">
                         This browser doesn't support video tag.
@@ -283,7 +281,7 @@
             </div>
         </div>
     </div>
-    <!-- The Modal -->
+    
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
@@ -305,7 +303,7 @@
                 } else {
                     x = 1;
                 }
-                // imgs_.innerHTML = "<img src=./Source/images/" + images[x - 1] + ">";
+                
                 imgs_.src = "./Source/images/" + images[x - 1];
             }
         }
@@ -313,13 +311,11 @@
         function showImg(imgs){
             var expandImg = document.getElementById("expandedImg");
             expandImg.src = imgs.src;
-            // expandImg.parentElement.style.display = "block";
+            
         }
 
-        // Get the modal
         var modal = document.getElementById('myModal');
 
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
         var modalImg = document.getElementById("img01");
         var captionText = document.getElementById("caption");
         imgs_.onclick = function(){
@@ -337,15 +333,12 @@
             viewEnabled = true;
         }
 
-        // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks on <span> (x), close the modal
         span.onclick = function() { 
             modal.style.display = "none";
             viewEnabled = false;
         }
     </script>
 </body>
-<script src="./index.js"></script>
 </html>
