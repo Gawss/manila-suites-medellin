@@ -313,6 +313,43 @@
                     }
                 }
 
+                document.onkeydown = checkKey;
+
+                function checkKey(e) {
+
+                    e = e || window.event;
+
+                    if (e.keyCode == '37') {
+                        document.getElementById(elementID).className = "column";
+                        if(x>2){
+                            x = x-1;
+                            elementID = 'mini_img_'+ x;
+                            imgs_.src = "./Source/images/(" + images[x-2];
+                            document.getElementById(elementID).className = "img_selected";
+                        }else{
+                            imgs_.src = "./Source/images/(" + images[1];
+                            x=1;
+                            elementID = 'mini_img_'+ x;
+                            document.getElementById(elementID).className = "img_selected";
+                        }
+                    }
+                    else if (e.keyCode == '39') {
+                        document.getElementById(elementID).className = "column";
+                        if(x<32){
+                            x = x+1;
+                            elementID = 'mini_img_'+ x;
+                            imgs_.src = "./Source/images/(" + images[x];
+                            document.getElementById(elementID).className = "img_selected";
+                        }else if(x===32){
+                            x = 1;
+                            elementID = 'mini_img_'+ x;
+                            imgs_.src = "./Source/images/(" + images[x];
+                            document.getElementById(elementID).className = "img_selected"; 
+                        }
+                    }
+
+                }
+
                 function showImg(imgs){
                     var expandImg = document.getElementById("expandedImg");
                     expandImg.src = imgs.src;
