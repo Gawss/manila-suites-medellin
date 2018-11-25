@@ -8,185 +8,168 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#sendButton").click(function sendMail(){
-                var investor_name_input = document.getElementById('investor_name_input').value;
-                var investor_email_input = document.getElementById('investor_email_input').value;
-                var investor_phone_input = document.getElementById('investor_phone_input').value;
-
-                if(investor_name_input !== '' && (investor_email_input !== '' | investor_phone_input !== '')){
-                    console.log(investor_name_input);
-                        $.post(
-                        'https://manila-suites-medellin.herokuapp.com/notification',
-                        {
-                            NAME: investor_name_input, 
-                            EMAIL: investor_email_input,
-                            PHONE: investor_phone_input
-                        },
-                        function(data, status){
-                        alert("E-mail sent.\nCorreo enviado.");
-                    });
-                }else{
-                    alert("Insert at least one way to communicate with you (email or phone). Thanks!.\nIngresa al menos una forma para comunicarnos contigo (correo o celular). ¡Gracias!")
-                }
-            });
-        });
-    </script>
 </head>
 <body>
-    <div class="header">
-        <div class="header__text">Manila Suites Medellín</div>
-    </div>
-    <div class="masterDiv">
-        <div class="state">
-            <div class="description">
+    <section class="main">
+        <header class="header">
+            <div class="header__text">Manila Suites Medellín</div>
+        </header>
+        <div class="state__1">
+            <section class="description">
                 <div class="logo">
                     <img src="./Source/images/logo.png" class="img_logo">
                 </div>
-                <div class="price">Information/Información</div>
-                <ul class="ul__Info">
+                <section class="containter_description__text">
                     <hr/>
-                    <li class="list__item_title">City/Ciudad:</li>
-                    <li class="list__item">Medellín, Antioquia, Colombia</li>
+                    <div class="container__Info__title">
+                        <h1 class="info__text">INFORMATION/INFORMACIÓN</h1>
+                    </div>
                     <hr/>
-                    <li class="list__item_title">Neighborhood/Barrio:</li>
-                    <li class="list__item">Manila Barrio in Poblado</li>
-                    <li class="list__item_neighbor">See the exciting scene in Manila!</li>
-                    <li class="list__item_neighbor">Click the buttons below 👇</li>
-                    <button class="btn__video" onclick="window.open('https://www.facebook.com/lospatioshostalboutique/videos/2219039175040121/')">Culture & Tradition</button>
-                    <button class="btn__video" onclick="window.open('https://www.facebook.com/lospatioshostalboutique/videos/339152623509126/')">Medellin en Tres</button>
-                    <button class="btn__LosPatios" onclick="window.open('https://www.facebook.com/lospatioshostalboutique/')">Check our next-door neighbor!</button>
-                    <hr/>
-                    <li class="list__item_title">Address/Dirección:</li>
-                    <li class="list__item">Carrera 43E #11-46</li>
-                    <hr/>
-                    <li class="list__item_title">Nearby Places/Lugares Cerca:</li>
-                    <li class="list__item">Exito del Poblado</li>
-                    <li class="list__item">Poblado Metro Station</li>
-                    <li class="list__item">Centro Comercial Monterrey</li>
-                    <li class="list__item">Body Tech Gym--Manila</li>
-                    <li class="list__item">Parque del Poblado</li>
-                    <hr/>
-                    <li class="list__item_title">Manila Studios Plan/Manila Studios Plano:</li>
+                    <ul class="ul__Info">
+                        <li class="list__item_title">City/Ciudad:</li>
+                        <li class="list__item">Medellín, Antioquia, Colombia</li>
+                        <hr/>
+                        <li class="list__item_title">Neighborhood/Barrio:</li>
+                        <li class="list__item">Manila Barrio in Poblado</li>
+                        <li class="list__item_neighbor">See the exciting scene in Manila!</li>
+                        <li class="list__item_neighbor">Click the buttons below 👇</li>
+                        <button class="btn__video" onclick="window.open('https://www.facebook.com/lospatioshostalboutique/videos/2219039175040121/')">Culture & Tradition</button>
+                        <button class="btn__video" onclick="window.open('https://www.facebook.com/lospatioshostalboutique/videos/339152623509126/')">Medellin en Tres</button>
+                        <button class="btn__LosPatios" onclick="window.open('https://www.facebook.com/lospatioshostalboutique/')">Check our next-door neighbor!</button>
+                        <hr/>
+                        <li class="list__item_title">Address/Dirección:</li>
+                        <li class="list__item">Carrera 43E #11-46</li>
+                        <hr/>
+                        <li class="list__item_title">Nearby Places/Lugares Cerca:</li>
+                        <li class="list__item">Exito del Poblado</li>
+                        <li class="list__item">Poblado Metro Station</li>
+                        <li class="list__item">Centro Comercial Monterrey</li>
+                        <li class="list__item">Body Tech Gym--Manila</li>
+                        <li class="list__item">Parque del Poblado</li>
+                        <hr/>
+                        <li class="list__item_title">Studios Plan/Planos estudios:</li>
+                    </ul>
                     <li class="list__item_enlarge">Click to enlarge</li>
-                </ul>
-                <img src="./Source/images/FloorPlan.png" class="img__floor__plan" id="image__plan"> -->
-                <li class="list__item_enlarge">-</li>
+                    <img src="./Source/images/FloorPlan.png" class="img__floor__plan" id="image__plan"> --                    
+                </section>
+            </section>
+            <section class="gallery">
                 <hr/>
-            </div>
-            <div class="gallery">
+                <div class="container__Info__title">
+                    <h1 class="info__text">GALLERY/GALERIA</h1>
+                </div>
+                <hr/>
                 <div class="container__img__principal" id="imageContainer">
-                    <img src="./Source/images/1.png" class="img__principal" id="expandedImg">
+                    <img src="./Source/images/1.jpg" class="gallery__img__principal" id="expandedImg">
                 </div>
                 <div class="container__imgs_miniatures">
                     <div class="row_img__miniatures">
-                        <div class="column">
-                            <img src="./Source/images/1.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_1">
+                            <img src="./Source/images/1.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/2.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_2">
+                            <img src="./Source/images/2.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/3.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_3">
+                            <img src="./Source/images/3.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/4.JPG" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_4">
+                            <img src="./Source/images/4.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/5.JPG" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_5">
+                            <img src="./Source/images/5.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/6.JPG" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_6">
+                            <img src="./Source/images/6.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/7.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_7">
+                            <img src="./Source/images/7.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/8.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_8">
+                            <img src="./Source/images/8.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/9.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_9">
+                            <img src="./Source/images/9.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/10.JPG" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_10">
+                            <img src="./Source/images/10.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/11.png" style="width:100%" onclick="showImg(this);">
-                        </div>
-                    </div>
-                    <div class="row_img__miniatures">
-                        <div class="column">
-                            <img src="./Source/images/12.png" style="width:100%"  onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/13.png" style="width:100%"  onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/14.png" style="width:100%"  onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/15.JPG" style="width:100%"  onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/16.JPG" style="width:100%"  onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/17.JPG" style="width:100%"    onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/18.JPG" style="width:100%"  onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/19.JPG" style="width:100%"  onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/20.JPG" style="width:100%"  onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/21.JPG" style="width:100%"  onclick="showImg(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./Source/images/22.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_11">
+                            <img src="./Source/images/11.jpg" onclick="showImg(this);">
                         </div>
                     </div>
                     <div class="row_img__miniatures">
-                        <div class="column">
-                            <img src="./Source/images/23.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_12">
+                            <img src="./Source/images/12.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/24.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_13">
+                            <img src="./Source/images/13.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/25.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_14">
+                            <img src="./Source/images/14.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/26.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_15">
+                            <img src="./Source/images/15.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/27.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_16">
+                            <img src="./Source/images/16.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/28.png" style="width:100%" onclick="showImg(this);">
+                        <div class="column" id="mini_img_17">
+                            <img src="./Source/images/17.jpg"   onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/29.png" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_18">
+                            <img src="./Source/images/18.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/30.JPG" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_19">
+                            <img src="./Source/images/19.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/31.JPG" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_20">
+                            <img src="./Source/images/20.jpg" onclick="showImg(this);">
                         </div>
-                        <div class="column">
-                            <img src="./Source/images/32.JPG" style="width:100%"  onclick="showImg(this);">
+                        <div class="column" id="mini_img_21">
+                            <img src="./Source/images/21.jpg" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_22">
+                            <img src="./Source/images/22.jpg" onclick="showImg(this);">
+                        </div>
+                    </div>
+                    <div class="row_img__miniatures">
+                        <div class="column" id="mini_img_23">
+                            <img src="./Source/images/23.jpg" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_24">
+                            <img src="./Source/images/24.jpg" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_25">
+                            <img src="./Source/images/25.jpg" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_26">
+                            <img src="./Source/images/26.jpg" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_27">
+                            <img src="./Source/images/27.jpg" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_28">
+                            <img src="./Source/images/28.jpg" style="width:100%" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_29">
+                            <img src="./Source/images/29.jpg" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_30">
+                            <img src="./Source/images/30.jpg" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_31">
+                            <img src="./Source/images/31.jpg" onclick="showImg(this);">
+                        </div>
+                        <div class="column" id="mini_img_32">
+                            <img src="./Source/images/32.jpg" onclick="showImg(this);">
                         </div>
                     </div>
                 </div>
                 <ul class="ul__Info">
                     <hr/>
                     <li class="list__item_Price_title">Obra Gris/Semi-Finished:</li>
-                    <li class="list__item_Price">Desde/From: $10'000.000 COP</li>
+                    <!-- <li class="list__item_Price">Desde/From: Unknown</li> -->
                     <hr/>
                     <li class="list__item_title">Description/Descripción:</li>
                     <li class="list__item_description">
@@ -207,37 +190,65 @@
                             máximo de ingresos.
                     </li>
                     <hr/>
-                    <li class="list__item_title">Specifications/Especificaciones:</li>
-                    <li class="list__item_description">Each floor has (including balconies)/Cada piso tiene (incluyendo balcones) 160 m^2/sq mt</li>
-                    <li class="list__item_description">Total area built (including rooftop terrace)/Área total construida (incluyendo terraza): 960 m^2/sq mt</li>
-                    <li class="list__item_description">Common areas/Zonas comunes: 250 m^2/sq mt</li>
-                    <li class="list__item_description">Three studio apts per floor/Tres estudios por piso</li>
-                    <li class="list__item_spec_apt">Aparment/Apartamento #1: 32 m^2/sq mt</li>
-                    <li class="list__item_spec_apt">Aparment/Apartamento #2: 32 m^2/sq mt</li>
-                    <li class="list__item_spec_apt">Aparment/Apartamento #3: 53 m^2/sq mt</li>
+                    <li class="list__item_sectionTitle">Specifications/Especificaciones:</li>
+                    <li class="list__item__specification__title">Each floor/Cada piso</li>
+                    <li class="list__item__specification__title">Including balconies has/Incluyendo balcones tiene:</li>
+                    <li class="list__item__specification__data">160 m^2/sq mt</li>
+                    <hr/>
+                    <li class="list__item__specification__title">Total area built/Área total construida:</li>
+                    <li class="list__item__specification__title">Including rooftop terrace/Incluyendo terraza:</li>
+                    <li class="list__item__specification__data">960 m^2/sq mt</li>
+                    <hr/>
+                    <li class="list__item__specification__title">Common areas/Zonas comunes:</li>
+                    <li class="list__item__specification__data">250 m^2/sq mt</li>
+                    <hr/>
+                    <li class="list__item__specification__title">Three studio apts per floor</li>
+                    <li class="list__item__specification__title">Tres estudios por piso</li>
+                    <hr/>
+                    <li class="list__item__specification__title">Aparment/Apartamento #1:</li>
+                    <li class="list__item__specification__data">32 m^2/sq mt</li>
+                    <li class="list__item__specification__title">Aparment/Apartamento #2:</li>
+                    <li class="list__item__specification__data">32 m^2/sq mt</li>
+                    <li class="list__item__specification__title">Aparment/Apartamento #3:</li>
+                    <li class="list__item__specification__data">53 m^2/sq mt</li>
                     <hr/>
                 </ul>
-            </div>
+            </section>
 
         </div>
-        <div class="state__2">
+        <section class="state__2">
             <div class="container__location">
                 <div class="location__title">Manila Suites Location</div>
-                <div class="image__location">
-                    <img src="./Source/images/maps.JPG">
+                <div class="container__image__location">
+                    <a href="https://goo.gl/maps/ujHqm2nsAgK2">
+                        <img class="image__location" src="./Source/images/maps.JPG">
+                    </a>
                 </div>
             </div>
             <div class="container__video">
                 <div class="video__title">Manila Suites Video</div>
-                <div>
-                    <video width = "70%" height = "auto" controls>
-                        <source src = "./Source/video/video.mp4" type = "video/mp4">
-                        This browser doesn't support video tag.
-                    </video>
-                </div>
+                <video class="video_item" controls>
+                    <source src = "./Source/video/video.mp4" type = "video/mp4">
+                    This browser doesn't support video tag.
+                </video>
             </div>
-        </div>
-        <div class="state__3">
+        </section>
+        <section class="state__3">
+            <div class="container__investor__info">
+                    <li class="contact__title">Contact Now!</li>
+                    <div class="container__form__investor">
+                        <ul class="ul__form__investor">
+                            <li class="list__item__contact_msg">Send us your info and we will contact you!</li>
+                            <li class="list__subtitle__contact">Name/Nombre:</li>
+                            <input class="text_input" type="_input_" id="investor_name_input" value="" placeholder="Your name..."></input>
+                            <li class="list__subtitle__contact">E-mail/Correo:</li>
+                            <input class="text_input" type="_input_" id="investor_email_input" value="" placeholder="Your E-mail..."></input>
+                            <li class="list__subtitle__contact">Phone/Celular:</li>
+                            <input class="text_input" type="_input_" id="investor_phone_input" value="" placeholder="Your phone number..."></input>
+                            <input class="form_button" type="submit" id="sendButton" value="Send/Enviar" ></input>
+                        </ul>
+                    </div>
+                </div>
             <div class="container__contact">
                 <div class="contact__title">Contact</div>
                 <ul class="ul__contact">
@@ -247,98 +258,117 @@
                     <div class="space"></div>
                     <a class="list__item__url" href="http://www.stellarviewrealty.com" target="_blank">www.stellarviewrealty.com</a>
                 </ul>
-                <div class="logo__bottom">
+                <div class="container__logo__bottom">
                     <img src="./Source/images/stellarLogo.png" class="img_stellar_logo">
                     <img src="./Source/images/logo.png" class="img_logo_bot">
                 </div>
             </div>
-            <div class="container__bottom__right">
+            <div class="container__bot__Architect">
                 <div class="contact__title">Architect</div>
                 <ul class="ul__contact">
                     <li class="list__item__contact">Richar Cardona Fernández</li>
                     <li class="list__item__contact">Cel: (+57) 302 243-4087</li>
-                    
                     <li class="list__item__contact">Concepto Arquitectura y Construccion</li>
                     <div class="space"></div>
                     <a class="list__item__url" href="http://www.conceptoayc.com" target="_blank">www.conceptoayc.com</a>
                 </ul>
-                <div class="container__Logo_Right">
-                    <img src="./Source/images/caycLogo.jpg" class="img_logo_bot_right">
+                <div class="container__Logo_Architect">
+                    <img src="./Source/images/caycLogo.jpg" class="img_logo_bot_architect">
                 </div>
             </div>
-            <div class="container__investor__info">
-                <li class="contact__title">Contact Now!</li>
-                <ul class="form_investor">
-                    <li class="list__item__contact_msg">Send us your info and we will contact you!</li>
-                    <li class="list__item__contact">Name/Nombre:</li>
-                    <input type="_input_" id="investor_name_input" value="" placeholder="Your name..."></input>
-                    <li class="list__item__contact">E-mail/Correo:</li>
-                    <input type="_input_" id="investor_email_input" value="" placeholder="Your E-mail..."></input>
-                    <li class="list__item__contact">Phone/Celular:</li>
-                    <input type="_input_" id="investor_phone_input" value="" placeholder="Your phone number..."></input>
-                    <input type="submit" id="sendButton" value="Send/Enviar" ></input>
-                </ul>
-            </div>
+        </section>
+    </section>
+        
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
         </div>
-    </div>
-    
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-    </div>
-    <script>
-        var images = [  '1.png','2.png','3.png','4.JPG','5.JPG','6.JPG','7.png','8.png','9.png','10.JPG','11.png','12.png',
-                        '13.png','14.png','15.JPG','16.JPG','17.JPG','18.JPG','19.JPG','20.JPG','21.JPG','22.png','23.png',
-                        '24.png','25.png','26.png','27.png','28.png','29.png','30.JPG','31.JPG','32.JPG'
-                    ];
-        var x = 0;
-        var imgs_ = document.getElementById('expandedImg');
-        var viewEnabled = false;
-        setInterval(slider, 4000);
-        function slider() {
-            if(viewEnabled == false){
-                if (x < images.length) {
-                    x = x + 1;
-                } else {
-                    x = 1;
+        <script>
+                var images = [  '1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg',
+                                '13.jpg','14.jpg','15.jpg','16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg',
+                                '24.jpg','25.jpg','26.jpg','27.jpg','28.jpg','29.jpg','30.jpg','31.jpg','32.jpg'
+                            ];
+                var x = 0;
+                var imgs_ = document.getElementById('expandedImg');
+                var viewEnabled = false;
+                var elementID = '';                
+                setInterval(slider, 4000);
+                function slider() {
+                    if(viewEnabled == false){
+                        if (x < images.length) {
+                            if(x > 0){
+                                elementID = 'mini_img_'+ x;
+                                document.getElementById(elementID).className = "column";
+                            }
+                            x = x + 1;
+                        } else {
+                            document.getElementById(elementID).className = "column";
+                            x = 1;
+                        }
+                        
+                        imgs_.src = "./Source/images/" + images[x - 1];
+                        elementID = 'mini_img_'+ x;
+                        document.getElementById(elementID).className = "img_selected";
+                    }
                 }
-                
-                imgs_.src = "./Source/images/" + images[x - 1];
-            }
-        }
 
-        function showImg(imgs){
-            var expandImg = document.getElementById("expandedImg");
-            expandImg.src = imgs.src;
-            
-        }
+                function showImg(imgs){
+                    var expandImg = document.getElementById("expandedImg");
+                    expandImg.src = imgs.src;
+                    
+                }
 
-        var modal = document.getElementById('myModal');
+                var modal = document.getElementById('myModal');
 
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        imgs_.onclick = function(){
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-            viewEnabled = true;
-        }
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                imgs_.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                    viewEnabled = true;
+                }
 
-        var img_Plan = document.getElementById('image__plan');
-        img_Plan.onclick = function(){
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-            viewEnabled = true;
-        }
+                var img_Plan = document.getElementById('image__plan');
+                img_Plan.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                    viewEnabled = true;
+                }
 
-        var span = document.getElementsByClassName("close")[0];
+                var span = document.getElementsByClassName("close")[0];
 
-        span.onclick = function() { 
-            modal.style.display = "none";
-            viewEnabled = false;
-        }
-    </script>
+                span.onclick = function() { 
+                    modal.style.display = "none";
+                    viewEnabled = false;
+                }
+
+            $(document).ready(function(){
+
+                $("#sendButton").click(function sendMail(){
+                    var investor_name_input = document.getElementById('investor_name_input').value;
+                    var investor_email_input = document.getElementById('investor_email_input').value;
+                    var investor_phone_input = document.getElementById('investor_phone_input').value;
+
+                    if(investor_name_input !== '' && (investor_email_input !== '' | investor_phone_input !== '')){
+                        console.log(investor_name_input);
+                            $.post(
+                            'https://manila-suites-medellin.herokuapp.com/notification',
+                            {
+                                NAME: investor_name_input, 
+                                EMAIL: investor_email_input,
+                                PHONE: investor_phone_input
+                            },
+                            function(data, status){
+                            alert("E-mail sent.\nCorreo enviado.");
+                        });
+                    }else{
+                        alert("Insert at least one way to communicate with you (email or phone). Thanks!.\nIngresa al menos una forma para comunicarnos contigo (correo o celular). ¡Gracias!")
+                    }
+                });
+            });
+        </script>
 </body>
 </html>
