@@ -2,6 +2,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: OpenSans-Semibold;
     src: url(./Source/font/OpenSans-Semibold.ttf);
@@ -27,8 +28,7 @@ header{
     text-align: center;
     align-items: center;
     position: sticky;
-    top: 0px;
-    margin-bottom: 5px;
+    top: 0px;    
     z-index: 1;
 }
 .header__text{
@@ -51,7 +51,9 @@ header{
 }
 .description {
     width: 100%;
-    height: 100%;
+    height: 100%;    
+    background-color: rgba(255, 255, 255, 0.8);
+    
 }
 .logo {
     margin-bottom: 5px;
@@ -63,7 +65,7 @@ header{
 }
 .img_logo {
     width: 40%;
-    height: 40%;
+    height: 40%;    
 }
 .containter_description__text{
     width: 100%;
@@ -102,6 +104,40 @@ header{
     font-size: 14px;
     background-color: rgba(0, 0, 0, 0.185);
     -webkit-text-fill-color: rgb(63, 62, 60);
+}
+.promos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.prom_1{
+    margin-bottom: 10px;
+    /* margin: 0 auto; */
+    max-width: 340px;
+    max-height: 160px;
+    width: 100%;
+    height: 100%;
+    padding: 6.4%;
+    background-color: rgba(250, 232, 152, 0.8);
+    text-align: center;
+    border-radius: 25px;
+}
+.promotion_title{
+    font-family: OpenSans-Semibold, serif;
+    font-size: 25px;
+    width: 100%;
+    height: 100%;
+}
+.promotion_text{
+    margin-top: 10px;
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
 }
 .list__item_neighbor{
     margin-bottom: 10px;
@@ -238,6 +274,7 @@ header{
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.452);
 }
 .container__img__principal{
     width: 100%;
@@ -673,9 +710,18 @@ input[type=text], select {
     }
     .state__1{
         flex-direction: row;
+        background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.322),
+            rgba(0, 0, 0, 0.322)
+        ),
+        url(./Source/images/description_background.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .description{
         width: 60%;
+        bottom: 0px;
     }
     .gallery__img__principal{
         width: 750px;
@@ -683,10 +729,21 @@ input[type=text], select {
     }
     .logo{
         min-height: 150px;
+        background-color: rgb(255, 255, 255);
     }
     .img_logo {
         width: 80%;
         height: 80%;
+    }
+    .prom_1{
+        max-width: 540px;
+        max-height: 260px;
+    }
+    .promotion_title{
+        font-size: 30px;
+    }
+    .promotion_text{
+        font-size: 20px;
     }
     .state__2{
         flex-direction: row;
