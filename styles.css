@@ -209,10 +209,19 @@ header{
 }
 
 .list__item_Price_title{
+    background: 
+        linear-gradient(
+            rgba(255, 252, 94, 0.473),
+            rgba(255, 255, 255, 0.473),
+            rgba(255, 252, 94, 0.473)
+            );
+
+    border-radius: 10px;
     margin-bottom: 5px;
     list-style-type: none;
     font-family: OpenSans-Semibold, serif;
     font-size: 25px;
+    padding: 20px;
 }
 
 .btn__video{
@@ -710,12 +719,12 @@ input[type=text], select {
     }
     .state__1{
         flex-direction: row;
-        background: 
+        /* background: 
         linear-gradient(
             rgba(0, 0, 0, 0.322),
             rgba(0, 0, 0, 0.322)
         ),
-        url(./Source/images/description_background.jpeg);
+        url(./Source/images/description_background.jpeg); */
         background-repeat: no-repeat;
         background-size: cover;
     }
