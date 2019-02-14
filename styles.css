@@ -206,6 +206,7 @@ header{
     list-style-type: none;
     font-family: OpenSans-Semibold, serif;
     font-size: 20px;
+    margin-top: 20px;
 }
 
 .list__item_Price_title{
